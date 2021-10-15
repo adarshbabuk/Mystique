@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+public class Library{
+	ArrayList<String> al = new ArrayList<String>();
+	
+	public static void main(String[] args) {
+
+    Library lb = new Library();
+    lb.addFavoriteBook("The Sun Also Rises by Ernest Hemingway");
+    lb.addFavoriteBook("The House of Mirth by Edith Wharton");
+    lb.addFavoriteBook("Moab is my Washpot by Stephen Fry");
+    lb.addFavoriteBook("The Great themes of scripture by Richard Rohr");
+    lb.addFavoriteBook("Vile Bodies by Evelyn Waugh");
+
+    lb.printFavoriteBooks();
+     }
+	
+	public void addFavoriteBook(String bookName )
+	{
+		if( !bookName.contains("Great"))
+		{
+		     al.add(bookName);
+		}
+	}
+	
+    public void printFavoriteBooks()
+       {
+		  System.out.println("favoritebooks "+al.size());
+		  
+		  for(String bl:al) {
+			  
+			  System.out.println(bl);
+		  }
+		  
+	    }
+	
+	}
